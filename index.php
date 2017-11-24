@@ -29,5 +29,5 @@ $pdf->fillForm([
 if (!$pdf->saveAs('filled.pdf')) {
     echo $pdf->getError();
 } else {
-	echo 'Generated: <a href="filled.pdf">filled.pdf</a>';
+    echo 'Generated: <a href="filled.pdf">filled.pdf</a>';
 }
