@@ -22,9 +22,12 @@ use mikehaertl\pdftk\Pdf;
 $pdf = new Pdf('form.pdf');
 $pdf->fillForm([
     'customer_number' => '1234-4321',
-    'phone_number'    => '(000) 99-88-7777',
+    'phone_number'    => '(000) 99-88-6767',
+    'phone_no_incl'   => '(000) 00-00-0000',
 ])->needAppearances();
 
 if (!$pdf->saveAs('filled.pdf')) {
     echo $pdf->getError();
+} else {
+	echo 'Generated: <a href="filled.pdf">filled.pdf</a>';
 }
